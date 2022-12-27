@@ -24,7 +24,7 @@ function Countdown(){
         console.log('updated time');
     } 
 
-    setInterval(() =>{ updateTime()}, 1000)
+    setInterval(() =>{ updateTime()}, 60000)
 
     let days = Math.floor(timer/1000/60/60/24)
     let hours = Math.floor((timer/1000/60/60))-(days*24)
@@ -36,10 +36,10 @@ function Countdown(){
             <h1>This will be the coutdown</h1>
             <h2>{currentTime}</h2>
             <h3>{newYearTime}</h3>
-            <h3>{days}</h3>
-            <h3>{hours}</h3>
-            <h3>{minutes}</h3>
-            <h3>{seconds}</h3>
+            <h3>{days} Days</h3>
+            <h3>{hours} Hours</h3>
+            <h3>{minutes} Minutes</h3>
+            <h3>{seconds} Seconds</h3>
         </div>
     )
 }
