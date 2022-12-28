@@ -7,8 +7,24 @@ function ResolutionEntry(){
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        addResolution(entry);
         console.log('resolution', entry);
         setEntry('');
+    }
+
+    const addResolution = (newResolution) => {
+        axios({
+            method: 'POST',
+            url: '/resolutions',
+            data: {
+                resolution: newResolution
+            }
+        }).then( response => {
+            console.log(response);
+            // getResolutions();
+        }).catch( err => {
+            console.log(err);
+        })
     }
 
     return(

@@ -10,7 +10,7 @@ const config = {
 
 const pool = new Pool(config);
 
-pool.on('connect', (client) => {
+pool.on('connect', (err, client) => {
     console.log('Unexpected error on idle pg client', err);
     process.exit(-1);
 });

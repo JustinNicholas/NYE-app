@@ -10,7 +10,7 @@ app.use(express.static('build'));
 
 // Express Routes
 
-app.use('/resolution', resolution);
+app.use('/resolutions', resolution);
 
 // start server
 
